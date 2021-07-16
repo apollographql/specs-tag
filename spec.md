@@ -1,11 +1,11 @@
-# %%SPEC-NAME%%
+# Tag
 
-<h2>%%SPEC-TITLE%%</h2>
+<h2>TK TODO XXX REPLACE THIS DESCRIPTION!</h2>
 
 ```raw html
 <table class=spec-data>
   <tr><td>Status</td><td>Draft</td>
-  <tr><td>Version</td><td>%%SPEC-VERSION%%</td>
+  <tr><td>Version</td><td>0.1</td>
 </table>
 <link rel=stylesheet href=https://specs.apollo.dev/apollo-light.css>
 <script type=module async defer src=https://specs.apollo.dev/inject-logo.js></script>
@@ -18,7 +18,7 @@ graph LR
   style core fill:none,stroke:fuchsia,color:fuchsia;
 ```
 
-This document defines a [core feature](https://specs.apollo.dev/core) named `%%SPEC-NAME%%` for  ...
+This document defines a [core feature](https://specs.apollo.dev/core) named `tag` for  ...
 
 This specification provides machinery to:
 - _Provide an example.  See other specifications for inspiration._

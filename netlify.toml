@@ -1,4 +1,4 @@
-# Netlify Admin: https://app.netlify.com/sites/apollo-specs-%%SPEC-NAME%%/
+# Netlify Admin: https://app.netlify.com/sites/apollo-specs-tag/
 # Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
