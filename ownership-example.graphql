@@ -1,6 +1,8 @@
-directive @tag(
-  name: String!
-) repeatable on FIELD_DEFINITION | INTERFACE | OBJECT | UNION
+directive @tag(name: String!) repeatable on 
+  | FIELD_DEFINITION
+  | INTERFACE
+  | OBJECT
+  | UNION
 
 schema
   @core(feature: "https://specs.apollo.dev/core/v0.2")
