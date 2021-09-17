@@ -23,10 +23,6 @@ This document uses [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) guidance reg
 
 This document specifies only the definition of the `@tag` directive. Tags have a number of useful applications including metadata and schema processing, none of which are specified within this document.
 
-# Example: Schema Filtering
-
-The following example demonstrates how sensitive fields and types can be labeled with tags. Tagging in this manner enables [Processors](https://specs.apollo.dev/core/v0.2/#sec-Processing-Schemas) to transform a schema in various ways. In this case, a Processor might output two schemas: one for administrative access only, and one for public consumption without access to any fields or types containing sensitive information.
-
 # Example: Team Ownership Metadata
 
 The following example demonstrates how team ownership over types and fields can be declaratively expressed via inline metadata. One might imagine a CI workflow which analyzes a schema diff and uses `@tag` names to authorize or require approval for changes to parts of the graph.
