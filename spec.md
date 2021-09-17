@@ -1,10 +1,10 @@
 # Tag
 
-<h2>for tagging schema elements with names</h2>
+<h2>for tagging GraphQL schema elements with names</h2>
 
 ```raw html
 <table class=spec-data>
-  <tr><td>Status</td><td>Release</td>
+  <tr><td>Status</td><td>Draft</td>
   <tr><td>Version</td><td>0.1</td>
 </table>
 <link rel=stylesheet href=https://specs.apollo.dev/apollo-light.css>
@@ -27,7 +27,11 @@ This document specifies only the definition of the `@tag` directive. Tags have a
 
 The following example demonstrates how sensitive fields and types can be labeled with tags. Tagging in this manner enables [Processors](https://specs.apollo.dev/core/v0.2/#sec-Processing-Schemas) to transform a schema in various ways. In this case, a Processor might output two schemas: one for administrative access only, and one for public consumption without access to any fields or types containing sensitive information.
 
-:::[example](filtering-example.graphql)
+# Example: Team Ownership Metadata
+
+The following example demonstrates how team ownership over types and fields can be declaratively expressed via inline metadata. One might imagine a CI workflow which analyzes a schema diff and uses `@tag` names to authorize or require approval for changes to parts of the graph.
+
+:::[example](ownership-example.graphql)
 
 # Overview
 
