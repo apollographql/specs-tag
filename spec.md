@@ -1,6 +1,6 @@
 # Tag
 
-<h2>TK TODO XXX REPLACE THIS DESCRIPTION!</h2>
+<h2>for tagging GraphQL schema elements with names</h2>
 
 ```raw html
 <table class=spec-data>
@@ -11,17 +11,9 @@
 <script type=module async defer src=https://specs.apollo.dev/inject-logo.js></script>
 ```
 
-```mermaid diagram -- An example diagram
-graph LR
-  classDef bg fill:none,color:#22262E;
-  s3:::bg-->core
-  style core fill:none,stroke:fuchsia,color:fuchsia;
-```
+This document defines a [core feature](https://specs.apollo.dev/core) named `tag` for labeling schema elements with arbitrary names (or tags).
 
-This document defines a [core feature](https://specs.apollo.dev/core) named `tag` for  ...
-
-This specification provides machinery to:
-- _Provide an example.  See other specifications for inspiration._
+This specification provides machinery to apply arbitrary tags to schema elements via the application of `@tag` directive usages. Tags can be applied to field, object, interface, and union definitions.
 
 # How to read this document
 
@@ -29,22 +21,22 @@ This document uses [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) guidance reg
 
 ## What this document isn't
 
-Example Text: This document specifies only the structure and semantics of supergraphs. It's expected that a supergraph will generally be the output of a compilation process which composes subgraphs. The mechanics of that process are not specified normatively here. Conforming implementations may choose any approach they like, so long as the result conforms to the requirements of this document.
+This document specifies only the definition of the `@tag` directive. Tags have a number of useful applications including metadata and schema processing, none of which are specified within this document.
 
-# Example: Usage
+# Example: Team Ownership Metadata
 
-_Provide or remove this section._
+The following example demonstrates how team ownership over types and fields can be declaratively expressed via inline metadata. One might imagine a CI workflow which analyzes a schema diff and uses `@tag` names to authorize or require approval for changes to parts of the graph.
+
+:::[example](ownership-example.graphql)
 
 # Overview
 
 *This section is non-normative.* It describes the motivation behind the directives defined by this specification.
 
-_Provide this section._
+The `@tag` directive is, in its simplest form, a mechanism for applying arbitrary string metadata to the fields and types of a schema. This metadata is potentially useful throughout the schema's lifecycle, including, but not limited to, processing, static analysis, and documentation.
 
 # Basic Requirements
 
-_Provide this section._
-
-Here is an example usage:
+A schema which implements the `@tag` spec MUST provide a definition which is compatible with the definition below:
 
 :::[definition](spec.graphql)
